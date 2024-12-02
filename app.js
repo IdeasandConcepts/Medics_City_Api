@@ -14,8 +14,11 @@ const ambulanceRoutes = require("./api/routes/ambulance");
 const orderRoutes = require("./api/routes/orders");
 
 // mongoose.connect(process.env.MONGO_ATLAS_PW,{useMongoClient:true})
-mongoose.connect("mongodb://localhost:27017/rest_api");
+// mongoose.connect("mongodb://localhost:27017/rest_api");
 
+mongoose.connect(
+  `mongodb+srv://hishaam6618:1057&1057@medics-city-api.ycon9.mongodb.net/medics-city-api?retryWrites=true&w=majority&appName=medics-city-api`
+);
 mongoose.Promise = global.Promise;
 app.use(morgan("dev"));
 app.use("/uploads", exprss.static("uploads"));

@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const checkAuth = require("../middleware/check-auth");
+// const checkAuth = require("../middleware/check-auth");
 
 const ordersContrller = require("../controller/orders");
 router.get("/:userId", ordersContrller.get_all_orders);

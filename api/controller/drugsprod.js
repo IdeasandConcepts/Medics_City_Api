@@ -56,7 +56,7 @@ exports.get_all_product = (req, res, next) => {
     .exec()
     .then((docs) => {
       ///   192.168.117.2
-      // console.log(docs.length);
+      console.log(docs.length);
       if (docs.length > 0) {
         const response = {
           count: docs.length,
@@ -82,7 +82,7 @@ exports.get_all_product = (req, res, next) => {
         res.status(200).json(response);
       } else {
         res.status(404).json({
-          message: "No  entries found ",
+          message: "No  entries found in drugs ",
         });
       }
     })
